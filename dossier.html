@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Досье — Шабаш Валькирии</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #0e0e0e;
+      color: #e6e6e6;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 30px 35px 45px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 1px #2e2e2e inset;
+    }
+    .header-link {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .header-link a {
+      color: #c9a87b;
+      text-decoration: none;
+      background: #2a1e12;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+    }
+    .header-link a:hover {
+      background: #8b0000;
+      color: white;
+    }
+    h1 {
+      font-size: 2.6rem;
+      text-align: center;
+      color: #c9a87b;
+      text-shadow: 2px 2px 0 #4a0000;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-family: 'Palatino', 'Georgia', serif;
+    }
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      color: #9e7b5c;
+      border-bottom: 1px dashed #5a3e2e;
+      padding-bottom: 15px;
+      margin-bottom: 35px;
+    }
+    .dossier-list {
+      list-style: none;
+    }
+    .dossier-list li {
+      background: #222;
+      margin: 20px 0;
+      padding: 15px 20px;
+      border-left: 5px solid #8b0000;
+      border-radius: 0 12px 12px 0;
+      transition: 0.2s;
+    }
+    .dossier-list li:hover {
+      background: #2c2c2c;
+      transform: translateX(6px);
+    }
+    .dossier-list a {
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #e6d5b3;
+    }
+    .dossier-list a:hover {
+      color: #ffb347;
+    }
+    .dossier-list p {
+      color: #aaa;
+      margin-top: 6px;
+      font-size: 0.9rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      background: #2a1e12;
+      padding: 8px 20px;
+      border-radius: 30px;
+      color: #e6d5b3;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      background: #8b0000;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 40px;
+      border-top: 1px solid #2e2e2e;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header-link">
+    <a href="index.html">← На главную</a>
+  </div>
+  <h1>Досье</h1>
+  <div class="tagline">Кто есть кто на шабаше саратовской власти</div>
+  <ul class="dossier-list">
+    <li>
+      <a href="dossier-gladkov.html">Сергей Гладков</a>
+      <p>Депутат-единоросс, куратор пропагандистской помойки, балашовское наследие.</p>
+    </li>
+     <li>
+      <a href="dossier-gribov.html">Роман Грибов</a>
+      <p>Экс-министр, депутат, куратор «Движ 64» и мастер сомнительных комплиментов.</p>
+    </li>
+    <li>
+      <a href="dossier-litnevskaya.html">Юлия Литневская</a>
+      <p>Депутат-единоросс, бывшая владелица канала «ХЗ», говорящая голова.</p>
+    </li>
+  </ul>
+  <div style="text-align: center;">
+    <a href="index.html" class="back-link">← Вернуться на главную</a>
+  </div>
+  <footer>
+    <p>Присылайте свои мысли, фото, видео на почту valshabash@proton.me. Анонимность гарантируем.</p>
+  </footer>
+</div>
+</body>
+</html>
