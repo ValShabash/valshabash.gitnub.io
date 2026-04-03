@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Досье: Роман Грибов — Шабаш Валькирии</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', 'Times New Roman', serif; background: #0e0e0e; color: #e6e6e6; line-height: 1.6; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; background: #1a1a1a; border-radius: 16px; padding: 30px 35px 45px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 1px #2e2e2e inset; }
+    h1 { font-size: 2.4rem; color: #c9a87b; text-shadow: 2px 2px 0 #4a0000; letter-spacing: 1px; margin-bottom: 15px; font-family: 'Palatino', 'Georgia', serif; border-left: 5px solid #8b0000; padding-left: 20px; }
+    .post-date { color: #8b6b4d; font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px dashed #5a3e2e; padding-bottom: 8px; }
+    .post-image { text-align: center; margin: 25px 0; }
+    .post-image img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid #8b0000; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+    .image-caption { font-size: 0.8rem; color: #9e7b5c; margin-top: 8px; font-style: italic; }
+    p { margin-bottom: 1.2em; }
+    strong { color: #e6d5b3; }
+    a { color: #c9a87b; text-decoration: none; }
+    a:hover { color: #ffb347; text-decoration: underline; }
+    .footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid #2e2e2e; text-align: center; font-size: 0.9rem; color: #aaa; }
+    .email { color: #c9a87b; font-weight: bold; background: #2a1e12; display: inline-block; padding: 4px 12px; border-radius: 40px; font-family: monospace; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; flex-wrap: wrap; }
+    .nav-link { background: #2a1e12; padding: 8px 20px; border-radius: 30px; color: #e6d5b3; text-decoration: none; transition: 0.2s; display: inline-block; }
+    .nav-link:hover { background: #8b0000; color: white; text-decoration: none; }
+    hr { border: none; height: 1px; background: linear-gradient(to right, #2e2e2e, #8b0000, #2e2e2e); margin: 20px 0; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Досье: Роман Грибов</h1>
+  <div class="post-date">3 апреля 2026 года</div>
+  <div class="post-image">
+    <img src="gribov.jpg" alt="Роман Грибов">
+    <div class="image-caption">Депутат Саратовской областной думы Роман Грибов</div>
+  </div>
+  <p>Областному депутату-единороссу <strong>Роману Грибову</strong> приписывают помойку «Движ 64», которая занимается разжиганием ненависти, как и помойка одного из видных саратовских единороссов <strong>Сергея Гладкова</strong> (про него досье мы уже готовили). Среди последних публикаций грибовской помойки – пост о дочери <strong>Андрея Рыжкова</strong>, экс-директора школы Балашова, в которой вспыхнул скандал со школьным питанием. Грибов публикует слегка обнаженные фотографии дочери Рыжкова, взятые из социальных сетей. Возможно, эти фотографии очень возбуждают депутата, хотя про него в свое время ходили голубые слухи. Некоторые анонимные каналы склоняются к тому, что Грибов нетрадиционной ориентации. Официальных данных о супруге Грибова нигде нет, а ему уже 53 года. Анонимный канал «ХЗ», принадлежавший другой областной депутатке-единоросске <strong>Юлии Литневской</strong>, называл Грибова «чучелом из комментаторской будки».</p>
+  <p>Свою карьеру Грибов начал на саратовском телевидении, добравшись до замдиректора ГТРК «Саратов». В 2012 году он был назначен директором ГТРК «Тула», но очень быстро был переведен в Москву, затем и вовсе возвращен в Саратов, где занял должность проректора по работе с государственными органами Саратовского государственного социально-экономического университета. В 2017–2021 гг. Грибов возглавлял Энгельсский филиал СГТУ. По образованию Грибов учитель русского языка, но преподавательской деятельностью он занимался лишь несколько лет, что не помешало ему получить звание кандидата исторических наук. Есть информация, что это звание ему помогли сделать, а его кандидатская была написана одним из известных историков.</p>
+  <p>В 2021 году Грибова назначили зампредом правительства области, а через год — министром спорта. Но уже в сентябре 2022 года он переходит в областную думу. Во многом Грибова протащил бывший секретарь саратовских единороссов <strong>Николай Панков</strong>. Панков протащил многих политиков, включая уже обсуждаемого ранее Гладкова, а также Литневскую. Все вышеупомянутые куклы Панкова играют роль именно кукол, которые должны продвигать необходимую повестку через сетку анонимных телеграм-каналов. Грибов отменял концерты некоторых звезд эстрады, призывал признать иноагентом <strong>Елену Налимову</strong>*.</p>
+  <p>Сейчас Грибов возглавляет комитет по социальной политике в областной думе, но его профессиональные качества оставляют желать лучшего. Это обычный нарцисс, который необходим как декорация (то самое чучело), чтобы показать бурную деятельность, не имея при этом какого-либо профильного образования, многим обязанный в своей карьере Панкову, чьи интересы он и обслуживает.</p>
+  <p><small>* признана иностранным агентом</small></p>
+  <hr>
+  <div class="footer-note">
+    <p>Мы активно следим за информационным пространством региона и не дадим вас обмануть. Поделитесь нашим сайтом со своими друзьями, ведь наш канал — единственный, кто взвешенно анализирует тот шабаш, что устроили власть имущие на земле Саратовской.</p>
+    <p>Свои мысли, а также фото или видео присылайте на почту <span class="email">valshabash@proton.me</span>. Анонимность гарантируем.</p>
+  </div>
+  <div class="nav-links">
+    <a href="dossier.html" class="nav-link">← Ко всем досье</a>
+    <a href="index.html" class="nav-link">На главную →</a>
+  </div>
+</div>
+</body>
+</html>
