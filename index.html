@@ -11,14 +11,14 @@
       box-sizing: border-box;
     }
     body {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  background: #0a0a0a;
-  background-image: radial-gradient(circle at 10% 20%, #2a0a0a 1px, transparent 1px);
-  background-size: 25px 25px;
-  color: #e6e6e6;
-  line-height: 1.6;
-  padding: 20px;
-}     
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #0a0a0a;
+      background-image: radial-gradient(circle at 10% 20%, #2a0a0a 1px, transparent 1px);
+      background-size: 25px 25px;
+      color: #e6e6e6;
+      line-height: 1.6;
+      padding: 20px;
+    }
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -26,6 +26,56 @@
       border-radius: 16px;
       padding: 30px 35px 45px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 1px #2e2e2e inset;
+    }
+    .top-nav {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .top-nav a {
+      color: #c9a87b;
+      text-decoration: none;
+      background: #2a1e12;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .top-nav a:hover {
+      background: #8b0000;
+      color: white;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-width: 180px;
+      height: auto;
+      border-radius: 50%;
+      border: 2px solid #8b0000;
+      box-shadow: 0 0 12px rgba(139,0,0,0.6);
+      transition: transform 0.2s;
+    }
+    .logo img:hover {
+      transform: scale(1.02);
+    }
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      color: #c9a87b;
+      text-shadow: 2px 2px 0 #4a0000;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-family: 'Palatino', 'Georgia', serif;
+    }
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      color: #9e7b5c;
+      border-bottom: 1px dashed #5a3e2e;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
     }
     h2 {
       font-size: 1.9rem;
@@ -72,6 +122,15 @@
       background: linear-gradient(to right, #2e2e2e, #8b0000, #2e2e2e);
       margin: 25px 0;
     }
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #aaaaaa;
+      margin-top: 20px;
+    }
+    footer p {
+      margin: 12px 0;
+    }
     .email {
       color: #c9a87b;
       font-weight: bold;
@@ -82,57 +141,109 @@
       font-family: monospace;
       letter-spacing: 0.5px;
     }
+    .search-box {
+      margin-bottom: 25px;
+    }
+    .search-box input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 30px;
+      border: none;
+      background: #2a2a2a;
+      color: #e6e6e6;
+      font-family: inherit;
+    }
+    .search-results {
+      margin-top: 10px;
+    }
+    .search-results ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .search-results li {
+      margin: 8px 0;
+    }
+    .search-results a {
+      color: #c9a87b;
+    }
   </style>
 </head>
 <body>
 <div class="container">
-    <div id="header"></div>
+  <div class="top-nav">
+    <a href="dossier.html">📁 Досье</a>
+    <a href="memoirs.html">📔 Мемуары саратовского мэра</a>
+  </div>
+  <div class="logo">
+    <img src="logo.jpg" alt="Логотип Шабаш Валькирии">
+  </div>
+  <h1>Шабаш Валькирии</h1>
+  <div class="tagline">О шабаше, что устроили власть имущие на земле Саратовской</div>
 
-  <div style="margin-bottom: 25px;">
-    <input type="text" id="searchInput" placeholder="🔍 Поиск по заголовкам..." style="width: 100%; max-width: 400px; padding: 10px; border-radius: 30px; border: none; background: #2a2a2a; color: #e6e6e6;">
-    <div id="searchResults" style="margin-top: 10px;"></div>
+  <!-- Поиск -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Поиск по заголовкам...">
+    <div id="searchResults" class="search-results"></div>
   </div>
 
   <h2>Публикации</h2>
-  <div id="posts-container"></div>
+  <ul class="post-list" id="static-post-list">
+    <li><a href="post1.html">Навалили кавалеры на полу</a><span class="post-date">(30.03.2026)</span></li>
+    <li><a href="post-isaev-dtp.html">Исаев лихачил на Исаева</a><span class="post-date">(31.03.2026)</span></li>
+    <li><a href="post-itogi-2025.html">Саратовские итоги 2025 года</a><span class="post-date">(08.04.2026)</span></li>
+    <li><a href="post-dudakov.html">Дудаковщина: как в Саратовской области обстоят дела со льготным обеспечением</a><span class="post-date">(15.04.2026)</span></li>
+  </ul>
 
   <hr>
-   <div id="footer"></div>
+
+  <footer>
+    <p>Мы активно следим за информационным пространством региона и не дадим вас обмануть. Поделитесь нашим сайтом. Свои мысли, а также фото или видео присылайте на почту <span class="email">valshabash@proton.me</span>. Анонимность гарантируем.</p>
+    <p>📱 Наш Telegram: <a href="https://t.me/valshabash" target="_blank">t.me/valshabash</a></p>
+  </footer>
 </div>
 
-<a href="https://t.me/valshabash" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 20px; right: 20px; background-color: #0088cc; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s, background-color 0.2s; z-index: 1000;">
+<!-- Плавающая иконка Telegram -->
+<a href="https://t.me/valshabash" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 20px; right: 20px; background-color: #0088cc; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.2s; z-index: 1000;">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
     <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.283-1.434z"/>
   </svg>
 </a>
-<script src="components.js"></script>
+
 <script>
-    const searchInput = document.getElementById('searchInput');
+  // Поиск по заголовкам (работает на основе статического списка)
+  const searchInput = document.getElementById('searchInput');
   const resultsDiv = document.getElementById('searchResults');
-  if (searchInput && resultsDiv) {
-    fetch('posts.json')
-      .then(r => r.json())
-      .then(posts => {
-        searchInput.addEventListener('input', function() {
-          const query = this.value.trim().toLowerCase();
-          if (query.length < 2) {
-            resultsDiv.innerHTML = '';
-            return;
-          }
-          const matches = posts.filter(post => post.title.toLowerCase().includes(query));
-          if (matches.length === 0) {
-            resultsDiv.innerHTML = '<p>Ничего не найдено</p>';
-            return;
-          }
-          let html = '<ul style="list-style:none; padding-left:0;">';
-          matches.forEach(post => {
-            html += <li style="margin:8px 0;"><a href="${post.url}">${post.title}</a> <span style="color:#aaa;">(${post.date})</span></li>;
-          });
-          html += '</ul>';
-          resultsDiv.innerHTML = html;
-        });
-      });
-  }
+  const postList = document.getElementById('static-post-list');
+  const originalItems = Array.from(postList.querySelectorAll('li'));
+
+  searchInput.addEventListener('input', function() {
+    const query = this.value.trim().toLowerCase();
+    if (query.length < 2) {
+      // Показать полный список
+      postList.innerHTML = '';
+      originalItems.forEach(item => postList.appendChild(item));
+      resultsDiv.innerHTML = '';
+      return;
+    }
+    const matches = originalItems.filter(item => {
+      const title = item.querySelector('a').innerText.toLowerCase();
+      return title.includes(query);
+    });
+    if (matches.length === 0) {
+      postList.innerHTML = '';
+      resultsDiv.innerHTML = '<p>Ничего не найдено</p>';
+      return;
+    }
+    // Скрываем полный список, показываем результаты поиска отдельно
+    postList.innerHTML = '';
+    let html = '<ul class="post-list">';
+    matches.forEach(item => {
+      html += item.outerHTML;
+    });
+    html += '</ul>';
+    resultsDiv.innerHTML = html;
+  });
 </script>
 </body>
-</html>
+</html>  
