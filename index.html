@@ -250,8 +250,7 @@
 <body>
 <div class="container">
   <div class="top-nav">
-    <a href="dossier.html">📁 Досье</a>
-    <a href="memoirs.html">📔 Мемуары саратовского мэра</a>
+        <a href="memoirs.html">📔 Мемуары саратовского мэра</a>
   </div>
   <div class="logo">
     <img src="logo.jpg" alt="Логотип Шабаш Валькирии">
@@ -266,21 +265,22 @@
   </div>
 
   <!-- Блок публикаций (динамический из posts.json) -->
-  <h2>📰 Публикации</h2>
+  <h2> Публикации</h2>
   <div id="posts-container"></div>
-
+ <ul class="post-list" id="static-post-list">
+    <li><a href="post1.html">Навалили кавалеры на полу</a><span class="post-date">(30.03.2026)</span></li>
+    <li><a href="post-isaev-dtp.html">Исаев лихачил на Исаева</a><span class="post-date">(31.03.2026)</span></li>
+    <li><a href="post-itogi-2025.html">Саратовские итоги 2025 года</a><span class="post-date">(08.04.2026)</span></li>
+    <li><a href="post-dudakov.html">Дудаковщина: как в Саратовской области обстоят дела со льготным обеспечением</a><span class="post-date">(15.04.2026)</span></li>
+  </ul>
   <!-- Блок досье (статический) -->
-  <h2>📁 Досье</h2>
+  <h2> Досье</h2>
   <ul class="dossier-list">
     <li>
       <a href="dossier-gladkov.html">Сергей Гладков</a>
       <span class="dossier-desc">Депутат-единоросс, куратор помойки «На заборе тоже пишут»</span>
     </li>
-    <li>
-      <a href="dossier-molchanov.html">Игорь Молчанов</a>
-      <span class="dossier-desc">И.о. мэра Саратова, «молчаливый политик»</span>
-    </li>
-    <li>
+       <li>
       <a href="dossier-gribov.html">Роман Грибов</a>
       <span class="dossier-desc">Депутат-единоросс, куратор «Движ 64», экс-министр</span>
     </li>
@@ -289,10 +289,7 @@
       <span class="dossier-desc">Депутат-единоросс, бывшая владелица канала «ХЗ»</span>
     </li>
   </ul>
-  <div style="text-align: right;">
-    <a href="dossier.html" class="all-dossiers-link">→ Все досье</a>
-  </div>
-
+ 
   <hr>
 
   <footer>
