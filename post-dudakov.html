@@ -118,6 +118,28 @@
       background-color: #8b0000;
       color: white;
     }
+    /* Перенос длинных заголовков в списке публикаций */
+.post-list a {
+  word-break: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .post-list li {
+    padding: 12px 15px;
+  }
+  .post-list a {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .post-list .post-date {
+    display: block;
+    margin-left: 0;
+    font-size: 0.75rem;
+  }
+}
   </style>
 </head>
 <body>
