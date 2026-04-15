@@ -6,7 +6,15 @@
   <title>Досье: Юлия Литневская — Шабаш Валькирии</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Georgia', 'Times New Roman', serif; background: #0e0e0e; color: #e6e6e6; line-height: 1.6; padding: 20px; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #0a0a0a;
+      background-image: radial-gradient(circle at 10% 20%, #2a0a0a 1px, transparent 1px);
+      background-size: 25px 25px;
+      color: #e6e6e6;
+      line-height: 1.6;
+      padding: 20px;
+    }
     .container { max-width: 900px; margin: 0 auto; background: #1a1a1a; border-radius: 16px; padding: 30px 35px 45px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 1px #2e2e2e inset; }
     h1 { font-size: 2.4rem; color: #c9a87b; text-shadow: 2px 2px 0 #4a0000; letter-spacing: 1px; margin-bottom: 15px; font-family: 'Palatino', 'Georgia', serif; border-left: 5px solid #8b0000; padding-left: 20px; }
     .post-date { color: #8b6b4d; font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px dashed #5a3e2e; padding-bottom: 8px; }
@@ -17,12 +25,99 @@
     strong { color: #e6d5b3; }
     a { color: #c9a87b; text-decoration: none; }
     a:hover { color: #ffb347; text-decoration: underline; }
+    .poll-block {
+      background: #2a1e12;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 30px 0;
+      text-align: center;
+      border: 1px solid #8b0000;
+    }
+    .poll-block h3 {
+      color: #c9a87b;
+      margin-bottom: 15px;
+    }
+    .poll-button {
+      display: inline-block;
+      background: #8b0000;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 5px;
+      transition: 0.2s;
+    }
+    .poll-button:hover {
+      background: #b22222;
+      color: white;
+      text-decoration: none;
+    }
     .footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid #2e2e2e; text-align: center; font-size: 0.9rem; color: #aaa; }
     .email { color: #c9a87b; font-weight: bold; background: #2a1e12; display: inline-block; padding: 4px 12px; border-radius: 40px; font-family: monospace; }
-    .nav-links { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; flex-wrap: wrap; }
-    .nav-link { background: #2a1e12; padding: 8px 20px; border-radius: 30px; color: #e6d5b3; text-decoration: none; transition: 0.2s; display: inline-block; }
-    .nav-link:hover { background: #8b0000; color: white; text-decoration: none; }
+    .back-link { display: inline-block; margin-top: 30px; background: #2a1e12; padding: 8px 20px; border-radius: 30px; color: #e6d5b3; text-decoration: none; transition: 0.2s; }
+    .back-link:hover { background: #8b0000; color: white; text-decoration: none; }
     hr { border: none; height: 1px; background: linear-gradient(to right, #2e2e2e, #8b0000, #2e2e2e); margin: 20px 0; }
+    /* Стили для иконок соцсетей */
+    .share-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .share-icons a {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #2a2a2a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .share-icons a:hover {
+      transform: scale(1.1);
+      background-color: #8b0000;
+    }
+    .share-icons svg {
+      width: 28px;
+      height: 28px;
+      fill: #e6d5b3;
+    }
+    .share-icons a:hover svg {
+      fill: white;
+    }
+    .share-button-native {
+      background-color: #8b0000;
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+      margin: 10px 5px;
+      transition: 0.2s;
+     }
+    .share-button-native:hover {
+      background-color: #b22222;
+    }
+    .copy-link-button {
+      background-color: #2a1e12;
+      border: none;
+      color: #c9a87b;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-family: inherit;
+      margin-top: 10px;
+    }
+    .copy-link-button:hover {
+      background-color: #8b0000;
+      color: white;
+    }
   </style>
 </head>
 <body>
