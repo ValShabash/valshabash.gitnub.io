@@ -198,6 +198,23 @@
   <p>Мы по-прежнему ждём, когда «бумажное развитие» превратится в нормальные дороги, отремонтированные трубы и рабочие места с достойной зарплатой. А пока — только «программы», «концепции» и «планы», которые в очередной раз разбиваются о реальность.</p>
 
   <hr>
+  <!-- Блок тегов (динамический) -->
+<div id="post-tags" style="margin: 20px 0; text-align: center;"></div>
+<script>
+  (function() {
+    const currentUrl = window.location.pathname.split('/').pop();
+    fetch('/posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const currentPost = posts.find(p => p.url === currentUrl);
+        if (currentPost && currentPost.tags && currentPost.tags.length) {
+          const tagsHtml = <p style="font-size:0.85rem; color:#aaa;">🔖 Теги: ${currentPost.tags.map(tag => <a href="/tags.html?tag=${encodeURIComponent(tag)}" style="color:#c9a87b; margin:0 4px;">${tag}</a>).join(', ')}</p>;
+          document.getElementById('post-tags').innerHTML = tagsHtml;
+        }
+      })
+      .catch(e => console.error('Ошибка загрузки тегов для поста', e));
+  })();
+</script>
 <!-- Блок "Поделиться" для post-itogi-2025.html -->
 <div style="text-align: center; margin: 30px 0 20px;">
   <p style="font-size: 0.9rem; color: #aaa;">Поделиться:</p>
@@ -231,7 +248,7 @@
   
    <div class="footer-note">
     <p>Мы активно следим за информационным пространством региона и не дадим вас обмануть. Но для этого нам потребуется ваша помощь. Поделитесь нашим сайтом со своими друзьями, ведь наш канал — единственный, кто взвешенно анализирует тот шабаш, что устроили власть имущие на земле Саратовской.</p>
-    <p>Свои мысли, а также фото или видео присылайте на почту <span class="email">valshabash@proton.me</span>. Анонимность гарантируем.</p>
+    <p>Свои мысли, а также фото или видео присылайте на почту <span class="email">valshabash@proton.me</span> Анонимность гарантируем.</p>
   </div>
 
   <div style="text-align: center;">
