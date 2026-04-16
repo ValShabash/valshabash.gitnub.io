@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Теги и персоналии — Шабаш Валькирии</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #0a0a0a;
+      background-image: radial-gradient(circle at 10% 20%, #2a0a0a 1px, transparent 1px);
+      background-size: 25px 25px;
+      color: #e6e6e6;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 30px 35px 45px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 1px #2e2e2e inset;
+    }
+    h1 {
+      font-size: 2.4rem;
+      color: #c9a87b;
+      border-left: 5px solid #8b0000;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .tag-cloud {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .tag-cloud a {
+      background: #2a1e12;
+      padding: 6px 14px;
+      border-radius: 30px;
+      color: #c9a87b;
+      text-decoration: none;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .tag-cloud a:hover {
+      background: #8b0000;
+      color: white;
+    }
+    .results {
+      margin-top: 30px;
+      border-top: 1px solid #2e2e2e;
+      padding-top: 20px;
+    }
+    .results ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+    .results li {
+      margin: 10px 0;
+      padding: 8px 12px;
+      background: #222;
+      border-left: 3px solid #8b0000;
+    }
+    .results a {
+      color: #e6d5b3;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .results a:hover {
+      color: #ffb347;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      background: #2a1e12;
+      padding: 6px 14px;
+      border-radius: 30px;
+      color: #c9a87b;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 20px; }
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>🔖 Все теги и персоналии</h1>
+  <p>Кликните на фамилию, чтобы найти все публикации и досье, где она упоминается.</p>
+
+  <div class="tag-cloud" id="tagCloud"></div>
+  <div class="results" id="results"></div>
+
+  <div style="margin-top: 30px;">
+    <a href="index.html" class="back-link">← На главную</a>
+  </div>
+</div>
+
+<script>
+  let allMaterials = []; // объединённый массив постов и досье
+
+  Promise.all([
+    fetch('posts.json').then(r => r.json()).catch(() => []),
+    fetch('dossiers.json').then(r => r.json()).catch(() => [])
+  ]).then(([posts, dossiers]) => {
+    allMaterials = [...posts, ...dossiers];
+    // Собираем все уникальные теги
+    const allTags = new Set();
+    allMaterials.forEach(item => {
+      if (item.tags && Array.isArray(item.tags)) {
+        item.tags.forEach(tag => allTags.add(tag));
+      }
+    });
+    const sortedTags = Array.from(allTags).sort();
+
+    // Рисуем облако тегов
+    const tagCloud = document.getElementById('tagCloud');
+    tagCloud.innerHTML = sortedTags.map(tag => <a href="#" data-tag="${tag}">${tag}</a>).join('');
+
+    // Функция показа результатов по тегу
+    function showResults(tag) {
+      const matching = allMaterials.filter(item => item.tags && item.tags.includes(tag));
+      const resultsDiv = document.getElementById('results');
+      if (matching.length === 0) {
+        resultsDiv.innerHTML = <p>Ничего не найдено по тегу «${tag}».</p>;
+        return;
+      }
+      let html = <h3>📌 Материалы с тегом «${tag}»</h3><ul>;
+      matching.forEach(item => {
+        let displayTitle = item.title;
+        let displayDate = item.date ? (${item.date}) : '';
+        html += <li><a href="${item.url}">${displayTitle}</a> ${displayDate}</li>;
+      });
+      html += '</ul>';
+      resultsDiv.innerHTML = html;
+    }
+  // Обработка кликов по тегам
+    document.querySelectorAll('.tag-cloud a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tag = link.getAttribute('data-tag');
+        showResults(tag);
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Если в URL есть параметр ?tag=...
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get('tag');
+    if (tagParam && sortedTags.includes(tagParam)) {
+      showResults(tagParam);
+    }
+  }).catch(err => {
+    console.error('Ошибка загрузки данных:', err);
+    document.getElementById('tagCloud').innerHTML = '<p style="color:red;">Не удалось загрузить теги.</p>';
+  });
+</script>
+</body>
+</html>
