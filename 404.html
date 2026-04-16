@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 — Шабаш Валькирии</title>
+  <title>Навалили кавалеров на полу — Шабаш Валькирии</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -14,57 +14,203 @@
       color: #e6e6e6;
       line-height: 1.6;
       padding: 20px;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #1a1a1a;
-      border-radius: 16px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-      border: 1px solid #2e2e2e;
-    }
-    h1 {
-      font-size: 6rem;
-      color: #8b0000;
-      text-shadow: 2px 2px 0 #4a0000;
-      margin-bottom: 20px;
-      font-family: 'Palatino', 'Georgia', serif;
-    }
-    p {
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-    }
-    a {
-      color: #c9a87b;
-      text-decoration: none;
+    .container { max-width: 900px; margin: 0 auto; background: #1a1a1a; border-radius: 16px; padding: 30px 35px 45px; box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 1px #2e2e2e inset; }
+    h1 { font-size: 2.4rem; color: #c9a87b; text-shadow: 2px 2px 0 #4a0000; letter-spacing: 1px; margin-bottom: 15px; font-family: 'Palatino', 'Georgia', serif; border-left: 5px solid #8b0000; padding-left: 20px; word-break: break-word; }
+    .post-date { color: #8b6b4d; font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px dashed #5a3e2e; padding-bottom: 8px; }
+    .post-image { text-align: center; margin: 25px 0; }
+    .post-image img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid #8b0000; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+    .image-caption { font-size: 0.8rem; color: #9e7b5c; margin-top: 8px; font-style: italic; }
+    p { margin-bottom: 1.2em; }
+    strong { color: #e6d5b3; }
+    a { color: #c9a87b; text-decoration: none; }
+    a:hover { color: #ffb347; text-decoration: underline; }
+    .poll-block {
       background: #2a1e12;
-      padding: 8px 20px;
-      border-radius: 30px;
-      display: inline-block;
-      transition: 0.2s;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 30px 0;
+      text-align: center;
+      border: 1px solid #8b0000;
     }
-    a:hover {
+    .poll-block h3 {
+      color: #c9a87b;
+      margin-bottom: 15px;
+    }
+    .poll-button {
+      display: inline-block;
       background: #8b0000;
       color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 5px;
+      transition: 0.2s;
     }
+    .poll-button:hover {
+      background: #b22222;
+      color: white;
+      text-decoration: none;
+    }
+    .footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid #2e2e2e; text-align: center; font-size: 0.9rem; color: #aaa; }
+    .email { color: #c9a87b; font-weight: bold; background: #2a1e12; display: inline-block; padding: 4px 12px; border-radius: 40px; font-family: monospace; }
+    .back-link { display: inline-block; margin-top: 30px; background: #2a1e12; padding: 8px 20px; border-radius: 30px; color: #e6d5b3; text-decoration: none; transition: 0.2s; }
+    .back-link:hover { background: #8b0000; color: white; text-decoration: none; }
+    hr { border: none; height: 1px; background: linear-gradient(to right, #2e2e2e, #8b0000, #2e2e2e); margin: 20px 0; }
+    /* Стили для иконок соцсетей */
+    .share-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .share-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .share-icons a:hover {
+      transform: scale(1.1);
+    }
+    .share-icons svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+    .share-button-native {
+      background-color: #8b0000;
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+      margin: 10px 5px;
+      transition: 0.2s;
+    }
+    .share-button-native:hover {
+      background-color: #b22222;
+    }
+    .copy-link-button {
+      background-color: #2a1e12;
+      border: none;
+      color: #c9a87b;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-family: inherit;
+      margin-top: 10px;
+    }
+    .copy-link-button:hover {
+      background-color: #8b0000;
+      color: white;
+    }
+
+    /* Мобильная адаптация */
     @media (max-width: 768px) {
-      h1 { font-size: 4rem; }
-      p { font-size: 1rem; }
-      .container { padding: 30px 20px; }
+      body { padding: 10px; }
+      .container { padding: 20px 15px; }
+      h1 { font-size: 1.6rem; padding-left: 15px; word-break: break-word; }
+      .post-date { font-size: 0.8rem; }
+      .share-icons { gap: 12px; }
+      .share-icons a { width: 40px; height: 40px; }
+      .share-icons svg { width: 20px; height: 20px; }
+      .share-button-native, .copy-link-button { font-size: 0.8rem; padding: 6px 16px; }
+      .poll-block { padding: 15px; }
+      .poll-button { padding: 8px 16px; font-size: 0.85rem; }
+      .footer-note { font-size: 0.85rem; }
+      .back-link { padding: 6px 16px; }
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <h1>404</h1>
-  <p>Страница не найдена. Похоже, её замело снегом или украли чиновники.</p>
-  <p><a href="index.html">Вернуться на главную</a></p>
+  <h1>Навалили кавалеры на полу</h1>
+  <div class="post-date">30 марта 2026 года</div>
+
+  <div class="post-image">
+    <img src="busargin.jpg" alt="Губернатор Роман Бусаргин">
+    <div class="image-caption">Губернатор Саратовской области Роман Бусаргин</div>
+  </div>
+
+  <p>Губернатора Саратовской области <strong>Романа Бусаргина</strong> наградили орденом Александра Невского за вклад в социально-экономическое развитие региона.</p>
+
+  <p>Дефицит бюджета региона за последний год увеличился почти в 2 раза — с 12,6 до 21,4 млрд рублей. Доходы сокращаются, расходы растут. При этом расходы на чиновников не сокращаются. В качестве исключения можно было привести пример того, что Бусаргин решил сократить на 10% количество чиновников... Но это явно будут мелкие клерки в каких-нибудь районах. Хотя количество заместителей мэра Саратова, их 8, можно было бы и сократить. Или урезать жалование депутатам областной думы, которые ничего полезного, кроме пустословия, не делают.</p>
+
+  <p>Ситуация с жильём в регионе стоит очень остро. Саратов стал последним среди 100 городов России по объёму строящегося жилья. Кроме того, Бусаргин на встрече с президентом России <strong>Владимиром Путиным</strong> в августе завысил количество введённого жилья на 100 тыс квадратных метров. Постоянные проблемы в сфере ЖКХ: рвёт трубы, заносит дороги. Постоянный срыв крупных проектов: трамвай, театр оперы, а теперь, видимо, вокзал.</p>
+
+  <p>Сельскохозяйственная отрасль страдает. Несмотря на громкие заявления губернатора, что регион становится лидером по сбору определённых культур, сёла не развиваются. Они планомерно вымирают.</p>
+
+  <p>Что же за вклад сделал Бусаргин? Урезал кадровую скамейку, что стало причиной круговорота мэров Саратова? С благодарностью увольнял тех, кто пытался на деньги куратора области <strong>Вячеслава Володина</strong> накормить детей гнилыми продуктами? Или может приобрёл для себя скандально известный катер, суд из-за которого превратился в цирковое представление?</p>
+
+  <hr>
+
+  <!-- Блок тегов (динамический) -->
+  <div id="post-tags" style="margin: 20px 0; text-align: center;"></div>
+  <script>
+    (function() {
+      const currentUrl = window.location.pathname.split('/').pop();
+      fetch('/posts.json')
+        .then(r => r.json())
+        .then(posts => {
+          const currentPost = posts.find(p => p.url === currentUrl);
+          if (currentPost && currentPost.tags && currentPost.tags.length) {
+            const tagsHtml = <p style="font-size:0.85rem; color:#aaa;">🔖 Теги: ${currentPost.tags.map(tag => <a href="/tags.html?tag=${encodeURIComponent(tag)}" style="color:#c9a87b; margin:0 4px;">${tag}</a>).join(', ')}</p>;
+            document.getElementById('post-tags').innerHTML = tagsHtml;
+          }
+        })
+        .catch(e => console.error('Ошибка загрузки тегов для поста', e));
+    })();
+  </script>
+ <!-- Блок "Поделиться" для post1.html -->
+  <div style="text-align: center; margin: 30px 0 20px;">
+    <p style="font-size: 0.9rem; color: #aaa;">Поделиться:</p>
+    <div class="share-icons">
+      <a href="https://vk.com/share.php?url=https://valshabash.github.io/post1.html&title=Навалили%20кавалеры%20на%20полу" target="_blank" rel="noopener noreferrer" style="background-color:#4680C2;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm2.95 13.67h-1.14c-.54 0-.72-.27-1.07-.78-1.02-1.5-2.12-2.01-2.47-1.75-.4.3-.1 1.27-.1 1.63 0 .19-.06.42-.41.42h-.59c-1.88 0-3.36-1.57-4.18-2.97-1.02-1.74-2.07-5.16-2.07-5.72 0-.31.24-.55.55-.55h1.17c.4 0 .57.25.68.5.35.8.97 2.05 1.52 2.88.53.8 1.01 1.22 1.34.95.45-.37.33-1.78.33-2.42 0-.82-.21-1.44-1.1-1.59-.3-.05.2-.99.85-1.2.63-.2 2.17-.19 2.91.19.52.27.6.99.6 1.64 0 .83-.18 1.79.24 2.08.42.3.98-.09 1.68-1.24.46-.77.88-1.7 1.05-2.23.07-.22.29-.45.69-.45h1.18c.54 0 .65.27.52.67-.37 1.15-1.57 2.94-2.07 3.5-.56.63-.97 1.09-.23 1.87.82.87 1.4 1.96 1.89 2.89.16.3-.01.55-.37.55z"/></svg>
+      </a>
+      <a href="https://t.me/share/url?url=https://valshabash.github.io/post1.html&text=Навалили%20кавалеры%20на%20полу" target="_blank" rel="noopener noreferrer" style="background-color:#0088cc;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.283-1.434z"/></svg>
+      </a>
+      <a href="https://connect.ok.ru/offer?url=https://valshabash.github.io/post1.html&title=Навалили%20кавалеры%20на%20полу" target="_blank" rel="noopener noreferrer" style="background-color:#F58220;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 5c-3.17 0-6.12.93-8.42 2.54L2 16.77c2.34-1.7 5.23-2.77 8.5-2.77s6.16 1.07 8.5 2.77l-1.58 1.77c-2.3-1.61-5.25-2.54-8.42-2.54z"/></svg>
+      </a>
+      <a href="https://max.ru/share?text=Навалили%20кавалеры%20на%20полу%20https://valshabash.github.io/post1.html" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(135deg, #2b5fc5, #a83de0);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 2.5c4.11 0 7.41 3.3 7.41 7.41 0 4.11-3.3 7.41-7.41 7.41-1.47 0-2.83-.43-4.01-1.15l-2.34.62.66-2.22c-.78-1.21-1.24-2.62-1.24-4.16 0-4.11 3.3-7.41 7.41-7.41z"/></svg>
+      </a>
+    </div>
+    <div>
+      <button id="nativeShareBtn1" class="share-button-native">📤 Поделиться через...</button>
+      <button id="copyLinkBtn1" class="copy-link-button">🔗 Скопировать ссылку</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      const shareBtn = document.getElementById('nativeShareBtn1');
+      if (shareBtn) shareBtn.addEventListener('click', () => { if(navigator.share) navigator.share({ title: document.title, url: window.location.href }); else alert('Ваш браузер не поддерживает стандартную кнопку "Поделиться".'); });
+      const copyBtn = document.getElementById('copyLinkBtn1');
+      if (copyBtn) copyBtn.addEventListener('click', () => { navigator.clipboard.writeText(window.location.href).then(() => alert('Ссылка скопирована!')); });
+    })();
+  </script>
+
+  <hr>
+
+  <div class="footer-note">
+    <p>Мы активно следим за информационным пространством региона и не дадим вас обмануть. Но для этого нам потребуется ваша помощь. Поделитесь нашим сайтом со своими друзьями, ведь наш канал — единственный, кто взвешенно анализирует тот шабаш, что устроили власть имущие на земле Саратовской.</p>
+    <p>Свои мысли, а также фото или видео присылайте на почту <span class="email">valshabash@proton.me</span> Анонимность гарантируем.</p>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="back-link">← На главную</a>
+  </div>
 </div>
 </body>
 </html>
